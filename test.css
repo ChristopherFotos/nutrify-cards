@@ -17,13 +17,18 @@ body {
 
 /* NEW CARD DESIGN BEGINS */
 
+.card-container {
+  width: 70%;
+  margin: auto;
+}
+
 .grid-card {
   background: #3b3b3b;
   border-radius: 10px;
   vertical-align: top;
-  /* height: 100%; */
+  height: 100%;
   display: inline-block;
-  width: 23vw;
+  width: 30%;
   margin: 1rem;
 }
 
@@ -47,8 +52,17 @@ body {
 }
 
 .recipe-summary-div {
-  border-top: 1px solid #1ee56b;
-  padding-top: 3%;
+  border-top: 1px solid rgba(190, 190, 190, 0.15);
+  color: #a2a2a2;
+  font-family: arial;
+  font-size: 0.74rem;
+  padding: 2% 30% 2% 2%;
+}
+
+.show-details {
+  padding: 3%;
+  font-family: Arial;
+  color: #a2a2a2;
 }
 
 /***********************/
@@ -63,13 +77,15 @@ body {
 .card-content-open {
   height: 100px;
   opacity: 1;
+  padding-left: 3%;
+  color: #a2a2a2;
+  font-family: arial;
   transition: all 0.4s ease;
   overflow-y: scroll;
 }
 
 .card-content-closed {
   height: 0;
-  /* display: none; */
   opacity: 0;
   transition: all 0.4s ease;
 }
