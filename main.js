@@ -6,6 +6,7 @@ targets.forEach((elem) => {
   elem.addEventListener("click", (e) => {
     if (!e.target.expanded) {
       e.target.expanded = true;
+      e.target.innerText = "Hide details";
       Array.from(e.target.parentElement.children[1].children).forEach((li) => {
         li.style.display = "block";
       });
@@ -17,6 +18,7 @@ targets.forEach((elem) => {
       e.target.parentElement.classList.add("card-open");
     } else if (e.target.expanded) {
       e.target.expanded = false;
+      e.target.innerText = "Show details";
       Array.from(e.target.parentElement.children[1].children).forEach((li) => {
         li.style.display = "none";
       });
