@@ -2,6 +2,19 @@ body {
   background: #2a2a2a;
 }
 
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1ee56b;
+  border-radius: 100px;
+}
+
 /* NEW CARD DESIGN BEGINS */
 
 .grid-card {
@@ -39,6 +52,10 @@ body {
 }
 
 /***********************/
+.ingredient-li {
+  display: none;
+}
+
 .card-open {
   height: 200px;
 }

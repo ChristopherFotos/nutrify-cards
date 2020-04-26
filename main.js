@@ -4,19 +4,31 @@ targets.forEach((elem) => {
   elem.addEventListener("click", (e) => {
     if (!e.target.expanded) {
       e.target.expanded = true;
+
+      Array.from(e.target.children[1].children).forEach((li) => {
+        li.style.display = "block";
+      });
+
       console.log(e.target.expanded);
       e.target.children[1].classList.remove("card-content-closed");
       e.target.children[1].classList.add("card-content-open"); //here, instead of directly manipulating styles, just add and remove classes.
       e.target.classList.remove("card-closed");
       e.target.classList.add("card-open");
+
       console.log(
         "**TOGGLE ON:** ",
         e.target,
         e.target.classList,
+        e.target.children,
         e.target.children[1].classList
       );
     } else if (e.target.expanded) {
       e.target.expanded = false;
+
+      Array.from(e.target.children[1].children).forEach((li) => {
+        li.style.display = "none";
+      });
+
       console.log(e.target.expanded);
       e.target.children[1].classList.remove("card-content-open");
       e.target.children[1].classList.add("card-content-closed"); //here, instead of directly manipulating styles, just add and remove classes.
@@ -28,6 +40,7 @@ targets.forEach((elem) => {
         "**TOGGLE OFF:** ",
         e.target,
         e.target.classList,
+        e.target.children,
         e.target.children[1].classList
       );
     }
