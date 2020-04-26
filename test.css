@@ -47,7 +47,7 @@ body {
   padding: 3%;
 }
 
-.card-content:hover {
+.show-details:hover {
   cursor: pointer;
 }
 
